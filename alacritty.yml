@@ -1,0 +1,56 @@
+## Import files (colors, fonts, etc.)
+import:
+  #- ~/.config/alacritty/colors/gruvbox-material.yml
+  - ~/.config/alacritty/colors/monokai-pro.yml
+  #- ~/.config/alacritty/colors/rose-pine.yml
+  - ~/.config/alacritty/fonts.yml
+
+## Terminal window settings
+window:
+  dimensions:
+    columns: 82
+    lines: 25
+
+  padding:
+    x: 0
+    y: 0
+
+  #decorations: Full
+  startup_mode: Windowed
+  dynamic_title: true
+
+  ## Scrolling
+  #history: 10000
+  #multiplier: 3
+
+  ## Background opacity
+  opacity: 0.9
+
+## Cursor
+cursor:
+  style:
+    shape: Block
+    blinking: On
+
+  #vi_mode_style: None
+  unfocused_hollow: false
+
+## Live config reload
+live_config_reload: true
+
+shell:
+  program: /bin/zsh
+
+working_directory: None
+
+key_bindings:
+  - { key: C,         mods: Control|Shift,    action: Copy             }
+  - { key: V,         mods: Control|Shift,    action: Paste            }
+  - { key: Return,    mods: Control|Shift,    action: SpawnNewInstance }
+  - { key: Key0,      mods: Control,          action: ResetFontSize    }
+  - { key: Equals,    mods: Control,          action: IncreaseFontSize }
+  - { key: Plus,      mods: Control,          action: IncreaseFontSize }
+  - { key: Minus,     mods: Control,          action: DecreaseFontSize }
+  - { key: L,         mods: Control,          action: ClearLogNotice   }
+  - { key: L,         mods: Control,          chars:  "\x0c"           }
+
